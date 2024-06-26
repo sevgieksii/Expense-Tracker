@@ -60,7 +60,12 @@
                                     </div>
                                 </div>
                             }
-                            @RenderBody()
+                            <div class="container">
+                                <main role="main" class="pb-3">
+                                    @await Html.PartialAsync("_SideBar", ViewData)
+                                    @RenderBody()
+                                </main>
+                            </div>
                         </main>
                     </div>
                 </div>

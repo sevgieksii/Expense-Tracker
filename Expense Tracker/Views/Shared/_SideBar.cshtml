@@ -33,12 +33,16 @@
         text = "",
         separator = true,
     });
+    float exchangeRate = ViewData["ExchangeRate"] != null ? (float)ViewData["ExchangeRate"] : 0;
+    var exchangeRateText = $"Exchange Rate: 1 USD = {exchangeRate} TRY";
+
     menuItems.Add(new
     {
-        text = "",
-        iconCss = "",
+        text = exchangeRateText,
+        iconCss = "fa-solid fa-money-bill",
         url = "#"
-    }); menuItems.Add(new
+    });
+    menuItems.Add(new
     {
         text = "",
         iconCss = "",
